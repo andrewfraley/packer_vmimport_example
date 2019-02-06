@@ -11,8 +11,6 @@ locals {
   ]
 }
 
-data "aws_caller_identity" "current" {}
-
 # S3 bucket to hold uploaded images
 # Packer uploads the ova here first, then invokes ec2 import-image which does the importing from s3
 resource "aws_s3_bucket" "bucket" {
